@@ -178,3 +178,6 @@ bindsym $mod+b exec playerctl previous
 bindsym $mod+p exec playerctl play-pause
 #Lockscreen
 bindsym $mod+Shift+s exec i3lock -t -i /home/corbinian/Pictures/Wallpapers/xayah_rakan_lockscreen.png
+#Start programs on certain workspaces
+assign [class="Spotify"] → 2
+assign [class="Firefox"] → 3
