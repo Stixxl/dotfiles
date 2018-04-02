@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BATINFO=`upower -i /org/freedesktop/UPower/devices/battery_BAT1`
+if [[ -n `echo $BATINFO | grep "state: *discharging"` && `echo $BATINFO | grep percentage | cut -f2 -d: | sed "s/.$//"` -le 30 ]] ; then
+    /usr/bin/notify-send -t 1000 "low battery" "$BATINFO"
+fi
