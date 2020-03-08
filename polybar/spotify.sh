@@ -18,9 +18,9 @@ then
     album=$(playerctl -p spotify metadata xesam:album )
     if [ $status == "Playing" ]
     then
-        echo -e " $artist || $album || $title"
+        echo -e " $artist || $title"
     else
-        echo -e "%{F#A54242} $artist || $album || $title "
+        echo -e "  $artist || $title "
     fi
 else
     echo ""
